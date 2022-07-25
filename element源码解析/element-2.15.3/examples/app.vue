@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <el-row :gutter="100" type="flex" justify="center">
-            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="6" :offset="1"><div class="grid-content bg-purple"></div></el-col>
             <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
             <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
             <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
