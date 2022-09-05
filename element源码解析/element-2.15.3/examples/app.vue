@@ -1,15 +1,15 @@
 <template>
     <div id="app">
-        <el-row :gutter="100" type="flex" justify="center">
-            <el-col :span="6" :offset="1"><div class="grid-content bg-purple"></div></el-col>
-            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-        </el-row>
+        <el-radio-group v-model="radio">
+            <el-radio :label="3">备选项</el-radio>
+            <el-radio :label="6">备选项</el-radio>
+            <el-radio :label="9">备选项</el-radio>
+        </el-radio-group>
     </div>
 </template>
 
 <script>
+    import radio from '../packages/radio'
     export default {
         name: 'app',
 
@@ -17,41 +17,14 @@
 
         methods: {},
 
-        mounted() {
+        mounted() {},
+
+        data () {
+            return {
+                radio: '1'
+            };
         }
     };
 </script>
 <style lang="scss">
-    .el-row {
-        margin-bottom: 20px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    .el-col {
-        border-radius: 4px;
-    }
-
-    .bg-purple-dark {
-        background: #99a9bf;
-    }
-
-    .bg-purple {
-        background: #d3dce6;
-    }
-
-    .bg-purple-light {
-        background: #e5e9f2;
-    }
-
-    .grid-content {
-        border-radius: 4px;
-        min-height: 36px;
-    }
-
-    .row-bg {
-        padding: 10px 0;
-        background-color: #f9fafc;
-    }
 </style>
